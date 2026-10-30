@@ -1,13 +1,11 @@
-Student Name: Wong Tsz Fung
-Student No.: 23043094S
+-- ============================================================
+-- Student Name: Wong Tsz Fung
+-- Student No.: 23043094S
 -- ============================================================
 
 SET SERVEROUTPUT ON;
 
--- ------------------------------------------------------------
--- 1. Clean up objects from a previous run
---    Ignore ORA-00942 / ORA-02289 / ORA-04043 when absent.
--- ------------------------------------------------------------
+
 BEGIN
     EXECUTE IMMEDIATE 'DROP PACKAGE library_system';
 EXCEPTION
