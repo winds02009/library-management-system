@@ -60,7 +60,7 @@ END;
 /
 
 -- ------------------------------------------------------------
--- 2. Create tables
+--  Create tables
 -- ------------------------------------------------------------
 
 CREATE TABLE Library (
@@ -116,7 +116,7 @@ CREATE TABLE Transactions (
 );
 
 -- ------------------------------------------------------------
--- 3. Insert original sample data
+--  Insert original sample data
 -- ------------------------------------------------------------
 
 INSERT INTO Library (Library_Name, Location, Telephone, E_mail)
@@ -187,7 +187,7 @@ VALUES (1005, 'Unexpected: The Autobiography',
 COMMIT;
 
 -- ------------------------------------------------------------
--- 4. Trigger
+--  Trigger
 --    Every inserted BORROW transaction decreases stock exactly
 --    once. The UPDATE locks the relevant Book row and prevents
 --    the available quantity from becoming negative.
@@ -218,7 +218,7 @@ END;
 /
 
 -- ------------------------------------------------------------
--- 5. Sequence
+--  Sequence
 -- ------------------------------------------------------------
 
 CREATE SEQUENCE transaction_seq
@@ -229,7 +229,7 @@ CREATE SEQUENCE transaction_seq
     NOCYCLE;
 
 -- ------------------------------------------------------------
--- 6. Package specification
+--  Package specification
 -- ------------------------------------------------------------
 
 CREATE OR REPLACE PACKAGE library_system AS
@@ -253,7 +253,7 @@ END library_system;
 /
 
 -- ------------------------------------------------------------
--- 7. Package body
+--  Package body
 -- ------------------------------------------------------------
 
 CREATE OR REPLACE PACKAGE BODY library_system AS
@@ -364,7 +364,7 @@ END library_system;
 /
 
 -- ------------------------------------------------------------
--- 8. Test: borrow a book for Mary, handled by staff member Tom
+--  Test: borrow a book for Mary, handled by staff member Tom
 --    The trigger automatically decreases Book.Quantity by 1.
 -- ------------------------------------------------------------
 
@@ -406,7 +406,7 @@ END;
 /
 
 -- ------------------------------------------------------------
--- 9. Optional test: return the latest active borrowing record
+--  Optional test: return the latest active borrowing record
 --    Uncomment this block only when you want to test returning.
 -- ------------------------------------------------------------
 
@@ -443,7 +443,7 @@ END;
 */
 
 -- ------------------------------------------------------------
--- 10. Original and useful verification queries
+--  Original and useful verification queries
 -- ------------------------------------------------------------
 
 DESC Library;
